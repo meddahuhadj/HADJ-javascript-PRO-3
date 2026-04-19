@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="HADJ JavaScript Expert Assistant with Gemini 2.5">
+  <meta name="theme-color" content="#F7DF1E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="HADJ JS">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="HADJ JavaScript Expert">
+  <meta name="msapplication-TileColor" content="#F7DF1E">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>HADJ JavaScript EXPERT</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 630 630'%3E%3Crect width='630' height='630' fill='%23f7df1e'/%3E%3Cpath d='m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z' fill='%23000'/%3E%3C/svg%3E">
+  <link rel="manifest" href="./manifest.json">
+
+  <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiSEFKRCBKYXZhU2NyaXB0IEVYUEVSVCIsInNob3J0X25hbWUiOiJIQURKIEpTIiwiZGVzY3JpcHRpb24iOiJKYXZhU2NyaXB0L1R5cGVTY3JpcHQgRXhwZXJ0IFZvaWNlIEFzc2lzdGFudCB3aXRoIEdlbWluaSAyLjUiLCJzdGFydF91cmwiOiIuIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzMyMzMzMCIsInRoZW1lX2NvbG9yIjoiI0Y3REYxRSIsIm9yaWVudGF0aW9uIjoiYW55IiwicHJlZmVyZW5jZS1kaXNwbGF5IjoiZnVsbHNjcmVlbiIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgNTEyIDUxMiclM0UlM0NyZWN0IHdpZHRoPSc1MTInIGhlaWdodD0nNTEyJyByeD0nNjQnIGZpbGw9JyUyMzMyMzMzMCclM0UlM0MvcmVjdCUzRSUzQ3RleHQgeD0nNTAlMjUnIHk9JzQwJTI1JyBmb250LXNpemU9JzE2MCcgZmlsbD0nd2hpdGUnIGZvbnQtd2VpZ2h0PSc5MDAnIHRleHQtYW5jaG9yPSdtaWRkbGUnJTNFSEpEJTNDL3RleHQlM0UlM0N0ZXh0IHg9JzUwJTI1JyB5PSc2NSUyNScgZm9udC1zaXplPSc3MCcgZmlsbD0nJTIzRjdERjFFJyBmb250LXdlaWdodD0nNzAwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJTNFSlMlM0MvdGV4dCUzRSUzQ3RleHQgeD0nNTAlMjUnIHk9Jzg1JTI1JyBmb250LXNpemU9JzM1JyBmaWxsPSd3aGl0ZScgb3BhY2l0eT0nMC44JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJTNFRVhQRVJUJTNDL3RleHQlM0UlM0MvZyUzRSUzQy9zdmclM0UiLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCIsInB1cnBvc2UiOiJhbnkgbWFza2FibGUifV0sImNhdGVnb3JpZXMiOlsiZWR1Y2F0aW9uIiwidG9vbHMiXSwic2hvcnRjdXRzIjpbeyJuYW1lIjoiSEFKRCBKIiwidXJsIjoiLiIsInNob3J0X2NvbnZlcnNhdGlvbiI6eyJuYW1lIjoiT3BlbiBIQURKIEpTIn19XX0=">
+
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='22' fill='%23323330'/%3E%3Ctext x='50%25' y='45%25' font-size='55' fill='white' font-weight='900' text-anchor='middle'%3EHJ%3C/text%3E%3Ctext x='50%25' y='75%25' font-size='30' fill='%23F7DF1E' font-weight='700' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='64' fill='%23323330'/%3E%3Ctext x='50%25' y='36%25' font-size='150' fill='white' font-weight='900' text-anchor='middle'%3EHJ%3C/text%3E%3Ctext x='50%25' y='60%25' font-size='80' fill='%23F7DF1E' font-weight='700' text-anchor='middle'%3EJS%3C/text%3E%3Ctext x='50%25' y='82%25' font-size='34' fill='white' opacity='0.8' text-anchor='middle'%3EEXPERT%3C/text%3E%3C/svg%3E">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(160deg, #1a1a1a 0%, #252520 40%, #323330 100%);
+      color: #f5f5f0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1400px; margin: 0 auto; padding: 1rem;
+      min-height: 100vh; display: flex; flex-direction: column;
+    }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.75rem 0; margin-bottom: 0.5rem; position: relative;
+    }
+
+    .logo-container { display: flex; align-items: center; gap: 0.75rem; }
+
+    .js-logo {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, #323330, #2a2a28, #F7DF1E);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.1rem; color: #323330;
+      box-shadow: 0 3px 14px rgba(247, 223, 30, 0.4);
+      position: relative; overflow: hidden;
+    }
+    .js-logo::after {
+      content: ''; position: absolute; top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.25) 50%, transparent 60%);
+      animation: logo-shine 3s infinite;
+    }
+    @keyframes logo-shine {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) rotate(45deg); }
+    }
+
+    h1 { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; }
+    h1 .hadj { background: linear-gradient(to right, #F7DF1E, #f0d700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h1 .js { background: linear-gradient(to right, #F7DF1E, #ffe066, #fff4b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h1 .expert { color: #c8b900; -webkit-text-fill-color: #c8b900; }
+    .subtitle { color: #888; font-size: 0.7rem; letter-spacing: 0.03em; }
+
+    .js-icon-container {
+      position: absolute; top: -10px; right: 0; z-index: 5;
+      animation: icon-float 4s ease-in-out infinite;
+      filter: drop-shadow(0 6px 20px rgba(0,0,0,0.4));
+      transition: transform 0.3s;
+    }
+    .js-icon-container:hover { transform: scale(1.08) rotate(0deg) !important; }
+    @keyframes icon-float {
+      0%, 100% { transform: translateY(0) rotate(3deg); }
+      50% { transform: translateY(-8px) rotate(-2deg); }
+    }
+    .js-icon-container img { width: 120px; height: auto; border-radius: 12px; object-fit: contain; }
+    @media (max-width: 900px) { .js-icon-container img { width: 90px; } }
+    @media (max-width: 600px) { .js-icon-container { top: -5px; right: -8px; } .js-icon-container img { width: 65px; } }
+
+    .header-right { display: flex; align-items: center; gap: 0.75rem; }
+
+    .install-btn {
+      display: none; align-items: center; gap: 0.4rem;
+      background: linear-gradient(135deg, #F7DF1E, #d4b800);
+      color: #323330; border: none; border-radius: 2rem;
+      padding: 0.4rem 0.9rem; font-size: 0.7rem; font-weight: 700;
+      cursor: pointer; transition: all 0.3s;
+      box-shadow: 0 4px 16px rgba(247, 223, 30, 0.3);
+      animation: install-pulse 2s infinite; font-family: inherit;
+    }
+    .install-btn.visible { display: flex; }
+    .install-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(247, 223, 30, 0.5); }
+    .install-btn svg { width: 16px; height: 16px; }
+    @keyframes install-pulse {
+      0%, 100% { box-shadow: 0 4px 16px rgba(247, 223, 30, 0.3); }
+      50% { box-shadow: 0 4px 24px rgba(247, 223, 30, 0.6); }
+    }
+
+    .status-indicator {
+      display: flex; align-items: center; gap: 0.6rem;
+      background: rgba(50, 51, 48, 0.6); padding: 0.4rem 0.8rem;
+      border-radius: 2rem; border: 1px solid rgba(247, 223, 30, 0.3);
+    }
+    .status-dot { width: 9px; height: 9px; border-radius: 50%; background: #555; transition: all 0.3s; }
+    .status-dot.active { background: #F7DF1E; box-shadow: 0 0 10px rgba(247, 223, 30, 0.6); animation: pulse 2s infinite; }
+    .status-text { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: #F7DF1E; font-family: monospace; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 10px rgba(247, 223, 30, 0.6); }
+      50% { opacity: 0.6; box-shadow: 0 0 5px rgba(247, 223, 30, 0.3); }
+    }
+
+    /* === TOOLBAR === */
+    .toolbar {
+      display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem; align-items: center;
+    }
+    .toolbar-btn {
+      display: flex; align-items: center; gap: 0.3rem;
+      background: rgba(50, 51, 48, 0.6); border: 1px solid rgba(247, 223, 30, 0.2);
+      color: #c8b900; border-radius: 0.5rem; padding: 0.35rem 0.65rem;
+      font-size: 0.7rem; cursor: pointer; transition: all 0.2s; font-family: inherit;
+      white-space: nowrap;
+    }
+    .toolbar-btn:hover { background: rgba(247, 223, 30, 0.15); border-color: #F7DF1E; color: #F7DF1E; }
+    .toolbar-btn.active { background: rgba(247, 223, 30, 0.2); border-color: #F7DF1E; color: #F7DF1E; }
+    .toolbar-btn svg { width: 14px; height: 14px; }
+    .toolbar-sep { width: 1px; height: 20px; background: rgba(247, 223, 30, 0.2); margin: 0 0.2rem; }
+
+    .tools-display { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem; min-height: 1.5rem; }
+    .tool-card {
+      background: rgba(50, 51, 48, 0.6); border: 1px solid rgba(247, 223, 30, 0.3);
+      padding: 0.3rem 0.6rem; border-radius: 2rem;
+      display: flex; align-items: center; gap: 0.3rem;
+      font-size: 0.75rem; backdrop-filter: blur(10px);
+      animation: tool-in 0.3s ease;
+    }
+    @keyframes tool-in { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+    .tool-card.library { border-color: #F7DF1E; }
+    .tool-card.project { background: rgba(247, 223, 30, 0.1); border-color: #F7DF1E; }
+    .tool-close { margin-left: 0.2rem; cursor: pointer; color: #888; transition: color 0.2s; font-size: 0.9rem; line-height: 1; }
+    .tool-close:hover { color: #ef4444; }
+
+    /* === MAIN LAYOUT === */
+    main { flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+    @media (min-width: 768px) { main { flex-direction: row; } }
+
+    .video-section { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+    .camera-wrapper { position: relative; width: 100%; max-width: 640px; }
+
+    .video-container {
+      position: relative; width: 100%; aspect-ratio: 4/3;
+      border-radius: 1rem; overflow: hidden;
+      border: 2px solid rgba(247, 223, 30, 0.3);
+      background: #1a1a1a;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .video-container.active {
+      border-color: rgba(247, 223, 30, 0.7);
+      box-shadow: 0 0 30px rgba(247, 223, 30, 0.15), inset 0 0 30px rgba(247, 223, 30, 0.03);
+    }
+    video { width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); }
+    .video-overlay {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: #888; text-align: center; padding: 1.5rem;
+      background: rgba(26, 26, 26, 0.85); transition: opacity 0.4s;
+    }
+    .video-overlay .camera-icon { font-size: 2.5rem; margin-bottom: 0.75rem; opacity: 0.5; }
+    .video-overlay p { font-size: 0.85rem; max-width: 260px; line-height: 1.5; }
+
+    .visualizer {
+      position: absolute; bottom: 0.6rem; right: 0.6rem;
+      width: 60px; height: 60px;
+      display: flex; align-items: center; justify-content: center; pointer-events: none;
+    }
+    .visualizer-core {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(50, 51, 48, 0.7); backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: center; transition: all 0.4s;
+    }
+    .visualizer-core.speaking { background: rgba(247, 223, 30, 0.9); animation: scale-pulse 0.8s infinite; }
+    .visualizer-core.listening { background: rgba(200, 185, 0, 0.9); box-shadow: 0 0 20px rgba(200, 185, 0, 0.5); }
+    @keyframes scale-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+    .visualizer svg { width: 18px; height: 18px; color: #323330; }
+
+    .camera-button-area {
+      position: absolute; bottom: 0.8rem; left: 50%; transform: translateX(-50%);
+      z-index: 10; display: flex; justify-content: center;
+    }
+    .control-btn {
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.65rem 1.8rem; border: none; border-radius: 3rem;
+      font-weight: 700; font-size: 0.85rem; cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      letter-spacing: 0.02em; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+      position: relative; overflow: hidden; backdrop-filter: blur(12px);
+    }
+    .control-btn::before {
+      content: ''; position: absolute; top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      transition: left 0.5s;
+    }
+    .control-btn:hover::before { left: 100%; }
+    .control-btn:active { transform: scale(0.96); }
+    .control-btn.start {
+      background: linear-gradient(135deg, rgba(50, 51, 48, 0.95), rgba(40, 40, 38, 0.95));
+      color: #F7DF1E; box-shadow: 0 6px 24px rgba(247, 223, 30, 0.3);
+    }
+    .control-btn.start:hover { box-shadow: 0 10px 32px rgba(247, 223, 30, 0.5); transform: translateY(-2px); }
+    .control-btn.stop {
+      background: linear-gradient(135deg, rgba(247, 223, 30, 0.9), rgba(200, 185, 0, 0.9));
+      color: #323330; box-shadow: 0 6px 24px rgba(247, 223, 30, 0.5);
+    }
+    .control-btn.stop:hover { box-shadow: 0 10px 32px rgba(247, 223, 30, 0.6); transform: translateY(-2px); }
+    .control-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
+    .control-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .status-message { min-height: 1.2rem; text-align: center; font-weight: 500; font-size: 0.8rem; margin-top: 0.3rem; }
+    .status-message.listening { color: #F7DF1E; }
+    .status-message.speaking { color: #ffe066; }
+    .status-message.connecting { color: #c8b900; }
+    .status-message.error { color: #f87171; }
+
+    /* === RIGHT PANEL === */
+    .right-panel { width: 100%; max-height: 400px; display: flex; flex-direction: column; gap: 0.5rem; }
+    @media (min-width: 768px) { .right-panel { width: 380px; max-height: none; } }
+
+    .panel-tabs {
+      display: flex; gap: 0.25rem; overflow-x: auto; padding-bottom: 0.25rem;
+      scrollbar-width: none;
+    }
+    .panel-tabs::-webkit-scrollbar { display: none; }
+    .panel-tab {
+      background: rgba(50, 51, 48, 0.5); border: 1px solid rgba(247, 223, 30, 0.15);
+      color: #999; border-radius: 0.5rem; padding: 0.35rem 0.6rem;
+      font-size: 0.65rem; cursor: pointer; transition: all 0.2s;
+      white-space: nowrap; font-family: inherit;
+    }
+    .panel-tab:hover { border-color: rgba(247, 223, 30, 0.4); color: #c8b900; }
+    .panel-tab.active { background: rgba(247, 223, 30, 0.15); border-color: #F7DF1E; color: #F7DF1E; }
+
+    .panel-content {
+      background: rgba(26, 26, 26, 0.7); backdrop-filter: blur(16px);
+      border-radius: 0.85rem; border: 1px solid rgba(247, 223, 30, 0.25);
+      padding: 0.75rem; flex: 1; overflow-y: auto;
+      display: none; flex-direction: column; gap: 0.5rem;
+    }
+    .panel-content.active { display: flex; }
+
+    .panel-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 0.4rem; border-bottom: 1px solid rgba(247, 223, 30, 0.2);
+    }
+    .panel-header h3 { color: #F7DF1E; font-size: 0.8rem; margin: 0; }
+    .panel-actions { display: flex; gap: 0.3rem; }
+
+    .action-btn {
+      background: rgba(50, 51, 48, 0.6); border: 1px solid rgba(247, 223, 30, 0.3);
+      color: #c8b900; border-radius: 0.4rem; padding: 0.3rem 0.5rem;
+      font-size: 0.65rem; cursor: pointer; transition: all 0.2s;
+      display: flex; align-items: center; gap: 0.25rem; font-family: inherit;
+    }
+    .action-btn:hover { background: rgba(247, 223, 30, 0.2); color: #F7DF1E; border-color: #F7DF1E; }
+    .action-btn.delete:hover { background: rgba(239, 68, 68, 0.3); border-color: #ef4444; color: #f87171; }
+    .action-btn.copied { background: rgba(247, 223, 30, 0.15); border-color: #F7DF1E; color: #F7DF1E; }
+    .action-btn svg { width: 13px; height: 13px; }
+
+    /* === TRANSCRIPTION === */
+    .transcription-messages { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 0.6rem; }
+    .transcription-empty { color: #888; text-align: center; padding: 1.5rem; font-style: italic; font-size: 0.8rem; }
+    .transcription-entry { display: flex; flex-direction: column; animation: msg-in 0.3s ease; }
+    @keyframes msg-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .transcription-entry.user { align-items: flex-end; }
+    .transcription-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 0.15rem; padding: 0 0.4rem; }
+    .transcription-bubble {
+      max-width: 85%; padding: 0.55rem 0.75rem; border-radius: 0.85rem;
+      font-size: 0.8rem; line-height: 1.4; position: relative;
+    }
+    .transcription-entry.user .transcription-bubble {
+      background: linear-gradient(135deg, #2a2a28, #323330);
+      color: #f5f5f0; border: 1px solid rgba(247, 223, 30, 0.2);
+      border-top-right-radius: 0.2rem;
+    }
+    .transcription-entry.agent .transcription-bubble {
+      background: linear-gradient(135deg, #323330, #3a3a30);
+      color: #f5f5f0; border: 1px solid rgba(247, 223, 30, 0.35);
+      border-top-left-radius: 0.2rem;
+    }
+    .bubble-copy-btn {
+      position: absolute; top: 0.25rem; right: 0.25rem;
+      background: rgba(0, 0, 0, 0.4); border: none;
+      color: rgba(255, 255, 255, 0.6); border-radius: 0.25rem;
+      padding: 0.15rem 0.3rem; cursor: pointer; font-size: 0.6rem;
+      transition: all 0.2s; opacity: 0; display: flex; align-items: center;
+    }
+    .transcription-entry:hover .bubble-copy-btn { opacity: 1; }
+    .bubble-copy-btn:hover { background: rgba(0, 0, 0, 0.6); color: white; }
+    .bubble-copy-btn.copied { background: rgba(247, 223, 30, 0.3); color: #F7DF1E; }
+    .bubble-copy-btn svg { width: 11px; height: 11px; }
+
+    .js-info {
+      background: rgba(26, 26, 26, 0.6); border: 1px solid rgba(247, 223, 30, 0.25);
+      border-radius: 0.6rem; padding: 0.75rem;
+    }
+    .js-info h3 { color: #F7DF1E; margin-bottom: 0.4rem; font-size: 0.8rem; }
+    .js-info ul { margin-left: 1rem; margin-top: 0.3rem; color: #c8b900; font-size: 0.75rem; line-height: 1.5; }
+
+    /* === CONSOLE === */
+    .console-output {
+      flex: 1; overflow-y: auto; font-family: 'Menlo', 'Consolas', 'Monaco', monospace;
+      font-size: 0.75rem; line-height: 1.6; padding: 0.5rem;
+      background: rgba(0, 0, 0, 0.4); border-radius: 0.5rem;
+      min-height: 120px; max-height: 250px;
+    }
+    .console-line { padding: 0.1rem 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+    .console-line.log { color: #ccc; }
+    .console-line.error { color: #f87171; }
+    .console-line.warn { color: #fbbf24; }
+    .console-line.info { color: #60a5fa; }
+    .console-line.result { color: #F7DF1E; }
+    .console-line.cmd { color: #888; }
+    .console-prompt { color: #F7DF1E; }
+    .console-input-row {
+      display: flex; gap: 0.3rem; align-items: center;
+      background: rgba(0, 0, 0, 0.3); border-radius: 0.4rem;
+      padding: 0.3rem 0.5rem; margin-top: 0.3rem;
+    }
+    .console-input-row .prompt { color: #F7DF1E; font-family: monospace; font-size: 0.8rem; }
+    .console-input {
+      flex: 1; background: transparent; border: none; color: #f5f5f0;
+      font-family: 'Menlo', 'Consolas', monospace; font-size: 0.75rem;
+      outline: none; caret-color: #F7DF1E;
+    }
+    .console-run-btn {
+      background: rgba(247, 223, 30, 0.2); border: 1px solid rgba(247, 223, 30, 0.4);
+      color: #F7DF1E; border-radius: 0.3rem; padding: 0.2rem 0.5rem;
+      font-size: 0.65rem; cursor: pointer; transition: all 0.2s; font-family: inherit;
+    }
+    .console-run-btn:hover { background: rgba(247, 223, 30, 0.35); }
+
+    /* === JSON FORMATTER === */
+    .json-area {
+      width: 100%; min-height: 100px; background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(247, 223, 30, 0.2); border-radius: 0.5rem;
+      color: #f5f5f0; font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 0.75rem; padding: 0.5rem; resize: vertical;
+      outline: none; transition: border-color 0.2s;
+    }
+    .json-area:focus { border-color: rgba(247, 223, 30, 0.5); }
+    .json-output {
+      background: rgba(0, 0, 0, 0.4); border-radius: 0.5rem;
+      padding: 0.5rem; font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 0.75rem; line-height: 1.5; overflow-x: auto;
+      max-height: 200px; overflow-y: auto; white-space: pre-wrap; word-break: break-all;
+    }
+    .json-key { color: #F7DF1E; }
+    .json-string { color: #86efac; }
+    .json-number { color: #93c5fd; }
+    .json-bool { color: #c4b5fd; }
+    .json-null { color: #f87171; }
+    .json-error { color: #f87171; font-weight: 600; }
+    .json-success { color: #86efac; font-weight: 600; }
+
+    /* === REGEX === */
+    .regex-input-row { display: flex; gap: 0.3rem; align-items: center; flex-wrap: wrap; }
+    .regex-input {
+      flex: 1; min-width: 120px; background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(247, 223, 30, 0.2); border-radius: 0.4rem;
+      color: #f5f5f0; font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 0.75rem; padding: 0.4rem 0.5rem; outline: none;
+    }
+    .regex-input:focus { border-color: rgba(247, 223, 30, 0.5); }
+    .regex-flags { display: flex; gap: 0.3rem; }
+    .regex-flag {
+      background: rgba(50, 51, 48, 0.6); border: 1px solid rgba(247, 223, 30, 0.2);
+      color: #888; border-radius: 0.3rem; padding: 0.2rem 0.4rem;
+      font-size: 0.7rem; cursor: pointer; font-family: monospace; transition: all 0.2s;
+    }
+    .regex-flag.active { background: rgba(247, 223, 30, 0.2); border-color: #F7DF1E; color: #F7DF1E; }
+    .regex-test-area {
+      width: 100%; min-height: 60px; background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(247, 223, 30, 0.2); border-radius: 0.5rem;
+      color: #f5f5f0; font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 0.75rem; padding: 0.5rem; resize: vertical; outline: none;
+    }
+    .regex-result {
+      padding: 0.4rem; font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 0.75rem; line-height: 1.6;
+    }
+    .regex-match { background: rgba(247, 223, 30, 0.3); color: #F7DF1E; border-radius: 2px; padding: 0 2px; }
+    .regex-group { background: rgba(96, 165, 250, 0.3); color: #93c5fd; border-radius: 2px; padding: 0 2px; }
+    .regex-info { color: #888; font-size: 0.7rem; margin-top: 0.3rem; }
+
+    /* === SNIPPETS === */
+    .snippet-list { display: flex; flex-direction: column; gap: 0.4rem; }
+    .snippet-item {
+      background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(247, 223, 30, 0.15);
+      border-radius: 0.5rem; padding: 0.5rem; cursor: pointer; transition: all 0.2s;
+    }
+    .snippet-item:hover { border-color: rgba(247, 223, 30, 0.5); background: rgba(247, 223, 30, 0.05); }
+    .snippet-name { color: #F7DF1E; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.2rem; }
+    .snippet-desc { color: #999; font-size: 0.65rem; }
+    .snippet-code {
+      display: none; margin-top: 0.4rem; background: rgba(0, 0, 0, 0.5);
+      border-radius: 0.4rem; padding: 0.5rem; font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 0.7rem; color: #ccc; overflow-x: auto; white-space: pre; position: relative;
+    }
+    .snippet-item.expanded .snippet-code { display: block; }
+    .snippet-copy {
+      position: absolute; top: 0.3rem; right: 0.3rem;
+      background: rgba(247, 223, 30, 0.2); border: 1px solid rgba(247, 223, 30, 0.4);
+      color: #F7DF1E; border-radius: 0.3rem; padding: 0.15rem 0.4rem;
+      font-size: 0.6rem; cursor: pointer; transition: all 0.2s;
+    }
+    .snippet-copy:hover { background: rgba(247, 223, 30, 0.35); }
+    .snippet-search {
+      width: 100%; background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(247, 223, 30, 0.2); border-radius: 0.4rem;
+      color: #f5f5f0; font-size: 0.75rem; padding: 0.4rem 0.5rem; outline: none;
+    }
+    .snippet-search:focus { border-color: rgba(247, 223, 30, 0.5); }
+
+    /* === TIMER === */
+    .timer-display {
+      text-align: center; font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 2.5rem; font-weight: 700; color: #F7DF1E;
+      letter-spacing: 0.05em; padding: 0.5rem 0;
+    }
+    .timer-controls { display: flex; gap: 0.4rem; justify-content: center; flex-wrap: wrap; }
+    .timer-btn {
+      background: rgba(50, 51, 48, 0.6); border: 1px solid rgba(247, 223, 30, 0.3);
+      color: #c8b900; border-radius: 0.5rem; padding: 0.4rem 0.8rem;
+      font-size: 0.75rem; cursor: pointer; transition: all 0.2s; font-family: inherit;
+    }
+    .timer-btn:hover { background: rgba(247, 223, 30, 0.15); border-color: #F7DF1E; color: #F7DF1E; }
+    .timer-btn.active { background: rgba(247, 223, 30, 0.2); border-color: #F7DF1E; color: #F7DF1E; }
+    .timer-btn.danger { border-color: rgba(239, 68, 68, 0.4); color: #f87171; }
+    .timer-btn.danger:hover { background: rgba(239, 68, 68, 0.15); border-color: #ef4444; }
+    .timer-presets { display: flex; gap: 0.3rem; justify-content: center; margin-top: 0.5rem; flex-wrap: wrap; }
+    .timer-preset {
+      background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(247, 223, 30, 0.15);
+      color: #999; border-radius: 0.4rem; padding: 0.25rem 0.5rem;
+      font-size: 0.65rem; cursor: pointer; transition: all 0.2s;
+    }
+    .timer-preset:hover { border-color: rgba(247, 223, 30, 0.4); color: #c8b900; }
+
+    /* === ENCODER === */
+    .encoder-input {
+      width: 100%; min-height: 60px; background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(247, 223, 30, 0.2); border-radius: 0.5rem;
+      color: #f5f5f0; font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 0.75rem; padding: 0.5rem; resize: vertical; outline: none;
+    }
+    .encoder-input:focus { border-color: rgba(247, 223, 30, 0.5); }
+    .encoder-output {
+      width: 100%; min-height: 60px; background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(247, 223, 30, 0.2); border-radius: 0.5rem;
+      color: #86efac; font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 0.75rem; padding: 0.5rem; overflow-wrap: break-word;
+      white-space: pre-wrap; word-break: break-all;
+    }
+    .encoder-actions { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+
+    /* === HASH === */
+    .hash-output-row {
+      display: flex; gap: 0.3rem; align-items: center;
+      background: rgba(0, 0, 0, 0.3); border-radius: 0.4rem;
+      padding: 0.3rem 0.5rem;
+    }
+    .hash-label { color: #F7DF1E; font-size: 0.65rem; font-weight: 700; min-width: 45px; font-family: monospace; }
+    .hash-value { flex: 1; color: #ccc; font-family: 'Menlo', 'Consolas', monospace; font-size: 0.7rem; overflow-x: auto; white-space: nowrap; }
+    .hash-copy {
+      background: rgba(247, 223, 30, 0.15); border: 1px solid rgba(247, 223, 30, 0.3);
+      color: #c8b900; border-radius: 0.3rem; padding: 0.15rem 0.35rem;
+      font-size: 0.6rem; cursor: pointer; transition: all 0.2s; flex-shrink: 0;
+    }
+    .hash-copy:hover { background: rgba(247, 223, 30, 0.3); color: #F7DF1E; }
+
+    /* === TOAST === */
+    .toast {
+      position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%) translateY(100px);
+      background: rgba(50, 51, 48, 0.95); border: 1px solid #F7DF1E;
+      color: white; padding: 0.6rem 1.2rem; border-radius: 2rem;
+      font-size: 0.8rem; z-index: 2000; backdrop-filter: blur(16px);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+    .toast.error { border-color: #ef4444; background: rgba(100, 20, 20, 0.95); }
+
+    /* === OVERLAYS === */
+    .install-overlay {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85);
+      display: none; align-items: center; justify-content: center;
+      z-index: 3000; padding: 1rem; backdrop-filter: blur(8px);
+    }
+    .install-overlay.show { display: flex; }
+    .install-dialog {
+      background: linear-gradient(160deg, #1a1a1a, #252520);
+      border: 1px solid #F7DF1E; border-radius: 1.2rem;
+      padding: 2rem; max-width: 420px; width: 100%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); text-align: center;
+    }
+    .install-dialog .app-icon {
+      width: 80px; height: 80px; margin: 0 auto 1rem;
+      background: linear-gradient(135deg, #323330, #F7DF1E);
+      border-radius: 18px; display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.4rem; color: #323330;
+      box-shadow: 0 6px 20px rgba(247, 223, 30, 0.3);
+    }
+    .install-dialog h2 { color: #F7DF1E; font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .install-dialog p { color: #c8b900; font-size: 0.8rem; line-height: 1.5; margin-bottom: 1.2rem; }
+    .install-dialog .platform-hint { color: #888; font-size: 0.7rem; margin-bottom: 1rem; font-style: italic; }
+    .install-dialog .btn-group { display: flex; gap: 0.6rem; }
+    .install-dialog .btn-install {
+      flex: 1; padding: 0.7rem; border: none; border-radius: 0.6rem;
+      background: linear-gradient(135deg, #F7DF1E, #c8b900);
+      color: #323330; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
+    }
+    .install-dialog .btn-install:hover { box-shadow: 0 4px 16px rgba(247, 223, 30, 0.4); }
+    .install-dialog .btn-cancel {
+      padding: 0.7rem 1rem; border: 1px solid rgba(247, 223, 30, 0.3);
+      border-radius: 0.6rem; background: transparent;
+      color: #c8b900; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
+    }
+    .install-dialog .btn-cancel:hover { border-color: #F7DF1E; color: #F7DF1E; }
+    .ios-instructions {
+      display: none; background: rgba(26, 26, 26, 0.6);
+      border: 1px solid rgba(247, 223, 30, 0.25); border-radius: 0.6rem;
+      padding: 0.8rem; margin-top: 0.5rem; font-size: 0.75rem; color: #c8b900;
+    }
+    .ios-instructions.show { display: block; }
+    .ios-instructions .step { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem; }
+    .ios-instructions .step:last-child { margin-bottom: 0; }
+    .ios-instructions .step-num {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(50, 51, 48, 0.7); display: flex;
+      align-items: center; justify-content: center;
+      font-size: 0.65rem; font-weight: 700; color: #F7DF1E; flex-shrink: 0;
+    }
+
+    .api-key-prompt {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1000; padding: 1rem; backdrop-filter: blur(8px);
+    }
+    .api-key-dialog {
+      background: linear-gradient(160deg, #1a1a1a, #252520);
+      border: 1px solid #F7DF1E; border-radius: 1rem;
+      padding: 1.5rem; max-width: 420px; width: 100%;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+    }
+    .api-key-dialog h2 { margin-bottom: 0.6rem; color: #F7DF1E; font-size: 1.2rem; }
+    .api-key-dialog p { margin-bottom: 1rem; color: #c8b900; font-size: 0.8rem; line-height: 1.5; }
+    .api-key-dialog input {
+      width: 100%; padding: 0.65rem 0.85rem; background: #1a1a1a;
+      border: 1px solid #F7DF1E; border-radius: 0.5rem; color: white;
+      font-size: 0.8rem; margin-bottom: 0.8rem; outline: none; transition: border-color 0.2s;
+    }
+    .api-key-dialog input:focus { border-color: #ffe066; box-shadow: 0 0 10px rgba(247, 223, 30, 0.3); }
+    .api-key-dialog .dialog-btn {
+      width: 100%; padding: 0.65rem; border: none; border-radius: 0.5rem;
+      background: linear-gradient(135deg, #F7DF1E, #c8b900);
+      color: #323330; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
+    }
+    .api-key-dialog .dialog-btn:hover { box-shadow: 0 4px 16px rgba(247, 223, 30, 0.4); }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(247, 223, 30, 0.4); border-radius: 3px; }
+
+    @media (max-width: 767px) {
+      .camera-wrapper { max-width: 100%; }
+      h1 { font-size: 1.15rem; }
+      .status-indicator { padding: 0.35rem 0.6rem; }
+      .header-right { flex-wrap: wrap; justify-content: flex-end; gap: 0.4rem; }
+      .toolbar { gap: 0.3rem; }
+      .toolbar-btn { padding: 0.3rem 0.5rem; font-size: 0.65rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <div class="js-logo"><svg viewBox="0 0 630 630" xmlns="http://www.w3.org/2000/svg">
+            <path d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z" fill="#000"/>
+          </svg></div>
+        <div>
+          <h1><span class="hadj">HADJ</span> <span class="js">JavaScript</span> <span class="expert">EXPERT</span></h1>
+          <p class="subtitle">Expert JavaScript and TypeScript voice assistant</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <button class="install-btn" id="installBtn" onclick="promptInstall()">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+          Install
+        </button>
+        <div class="status-indicator">
+          <div class="status-dot" id="statusDot"></div>
+          <span class="status-text" id="statusText">IDLE</span>
+        </div>
+        <div class="js-icon-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" onerror="this.style.display='none';">
+        </div>
+      </div>
+    </header>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+      <button class="toolbar-btn" onclick="openTool('console')" title="JavaScript Console">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+        Console
+      </button>
+      <button class="toolbar-btn" onclick="openTool('json')" title="JSON Formatter">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h10M4 18h6" /></svg>
+        JSON
+      </button>
+      <button class="toolbar-btn" onclick="openTool('regex')" title="Regex Tester">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        Regex
+      </button>
+      <button class="toolbar-btn" onclick="openTool('snippets')" title="Code Snippets">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+        Snippets
+      </button>
+      <div class="toolbar-sep"></div>
+      <button class="toolbar-btn" onclick="openTool('encoder')" title="Encoder/Decoder">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+        Encode
+      </button>
+      <button class="toolbar-btn" onclick="openTool('hash')" title="Hash Generator">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+        Hash
+      </button>
+      <button class="toolbar-btn" onclick="openTool('timer')" title="Pomodoro Timer">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        Timer
+      </button>
+    </div>
+
+    <div class="tools-display" id="toolsDisplay"></div>
+
+    <main>
+      <div class="video-section">
+        <div class="camera-wrapper">
+          <div class="video-container" id="videoContainer">
+            <video id="video" autoplay playsinline muted></video>
+            <div class="video-overlay" id="videoOverlay">
+              <div class="camera-icon">&#128187;</div>
+              <p>Click the button below to start the JavaScript Expert assistant</p>
+            </div>
+            <div class="visualizer">
+              <div class="visualizer-core" id="visualizerCore">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+              </div>
+            </div>
+            <div class="camera-button-area">
+              <button id="controlBtn" class="control-btn start">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <span id="btnText">Start the Assistant</span>
+              </button>
+            </div>
+            <canvas id="canvas" style="display:none"></canvas>
+          </div>
+        </div>
+        <div class="status-message" id="statusMessage"></div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right-panel">
+        <div class="panel-tabs">
+          <button class="panel-tab active" data-tab="chat" onclick="switchTab('chat')">Chat</button>
+          <button class="panel-tab" data-tab="console" onclick="switchTab('console')">Console</button>
+          <button class="panel-tab" data-tab="json" onclick="switchTab('json')">JSON</button>
+          <button class="panel-tab" data-tab="regex" onclick="switchTab('regex')">Regex</button>
+          <button class="panel-tab" data-tab="snippets" onclick="switchTab('snippets')">Snippets</button>
+          <button class="panel-tab" data-tab="encoder" onclick="switchTab('encoder')">Encode</button>
+          <button class="panel-tab" data-tab="hash" onclick="switchTab('hash')">Hash</button>
+          <button class="panel-tab" data-tab="timer" onclick="switchTab('timer')">Timer</button>
+        </div>
+
+        <!-- CHAT TAB -->
+        <div class="panel-content active" id="panel-chat">
+          <div class="panel-header">
+            <h3>&#128172; HADJ JavaScript Expert</h3>
+            <div class="panel-actions">
+              <button class="action-btn" id="copyAllBtn" onclick="copyAllConversation()" title="Copy">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                Copy
+              </button>
+              <button class="action-btn delete" id="deleteAllBtn" onclick="deleteAllConversation()" title="Delete">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                Delete
+              </button>
+            </div>
+          </div>
+          <div class="transcription-messages" id="transcriptionMessages">
+            <div class="transcription-empty">Transcription will appear here...</div>
+            <div class="js-info">
+              <p style="color:#c8b900; font-size:0.75rem;">I can help you with:</p>
+              <ul>
+                <li>JavaScript ES6+ (ES2015-ES2024) and TypeScript</li>
+                <li>Asynchronous: Promises, async/await, Event Loop</li>
+                <li>DOM manipulation, Web APIs, Fetch, WebSockets</li>
+                <li>Node.js, Deno, Bun — runtime and server development</li>
+                <li>Frontend frameworks: React, Vue, Angular, Svelte</li>
+                <li>Backend frameworks: Express, Fastify, NestJS, Hono</li>
+                <li>State management: Redux, Zustand, Pinia, Signals</li>
+                <li>Testing: Jest, Vitest, Playwright, Cypress</li>
+                <li>Bundlers and tools: Vite, Webpack, esbuild, Turbopack</li>
+                <li>APIs: REST, GraphQL, tRPC, gRPC</li>
+                <li>Databases: MongoDB, PostgreSQL (Prisma, Drizzle)</li>
+                <li>Deployment: Docker, Serverless, Edge Functions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONSOLE TAB -->
+        <div class="panel-content" id="panel-console">
+          <div class="panel-header">
+            <h3>&#128187; JavaScript Console</h3>
+            <div class="panel-actions">
+              <button class="action-btn" onclick="clearConsole()" title="Clear">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          <div class="console-output" id="consoleOutput">
+            <div class="console-line info">// HADJ JavaScript Console — type JS and press Enter or Run</div>
+          </div>
+          <div class="console-input-row">
+            <span class="prompt">&gt;</span>
+            <input class="console-input" id="consoleInput" placeholder="Type JavaScript..." autocomplete="off" spellcheck="false">
+            <button class="console-run-btn" onclick="runConsole()">Run</button>
+          </div>
+        </div>
+
+        <!-- JSON TAB -->
+        <div class="panel-content" id="panel-json">
+          <div class="panel-header">
+            <h3>{ } JSON Formatter</h3>
+            <div class="panel-actions">
+              <button class="action-btn" onclick="formatJson()" title="Format">Format</button>
+              <button class="action-btn" onclick="minifyJson()" title="Minify">Minify</button>
+              <button class="action-btn" onclick="copyJsonOutput()" title="Copy">Copy</button>
+            </div>
+          </div>
+          <textarea class="json-area" id="jsonInput" placeholder='Paste your JSON here, e.g. {"name": "HADJ", "version": 1}'></textarea>
+          <div class="json-output" id="jsonOutput"></div>
+        </div>
+
+        <!-- REGEX TAB -->
+        <div class="panel-content" id="panel-regex">
+          <div class="panel-header">
+            <h3>&#128270; Regex Tester</h3>
+          </div>
+          <div class="regex-input-row" style="margin-bottom:0.4rem;">
+            <span style="color:#888;font-size:0.8rem;">/</span>
+            <input class="regex-input" id="regexPattern" placeholder="Enter regex pattern" style="flex:2">
+            <span style="color:#888;font-size:0.8rem;">/</span>
+            <div class="regex-flags">
+              <span class="regex-flag active" data-flag="g" onclick="toggleFlag(this)">g</span>
+              <span class="regex-flag" data-flag="i" onclick="toggleFlag(this)">i</span>
+              <span class="regex-flag active" data-flag="m" onclick="toggleFlag(this)">m</span>
+              <span class="regex-flag" data-flag="s" onclick="toggleFlag(this)">s</span>
+            </div>
+          </div>
+          <textarea class="regex-test-area" id="regexTestString" placeholder="Enter test string here..."></textarea>
+          <div class="regex-result" id="regexResult">
+            <div class="regex-info">Enter a pattern and test string to see matches</div>
+          </div>
+        </div>
+
+        <!-- SNIPPETS TAB -->
+        <div class="panel-content" id="panel-snippets">
+          <div class="panel-header">
+            <h3>&#128221; Code Snippets</h3>
+          </div>
+          <input class="snippet-search" id="snippetSearch" placeholder="Search snippets..." oninput="filterSnippets()">
+          <div class="snippet-list" id="snippetList"></div>
+        </div>
+
+        <!-- ENCODER TAB -->
+        <div class="panel-content" id="panel-encoder">
+          <div class="panel-header">
+            <h3>&#128273; Encoder / Decoder</h3>
+          </div>
+          <textarea class="encoder-input" id="encoderInput" placeholder="Enter text to encode or decode..."></textarea>
+          <div class="encoder-actions" style="margin:0.4rem 0;">
+            <button class="action-btn" onclick="encodeText('base64')">Base64 Encode</button>
+            <button class="action-btn" onclick="decodeText('base64')">Base64 Decode</button>
+            <button class="action-btn" onclick="encodeText('uri')">URI Encode</button>
+            <button class="action-btn" onclick="decodeText('uri')">URI Decode</button>
+            <button class="action-btn" onclick="encodeText('html')">HTML Encode</button>
+            <button class="action-btn" onclick="decodeText('html')">HTML Decode</button>
+            <button class="action-btn" onclick="encodeText('unicode')">Unicode Escape</button>
+            <button class="action-btn" onclick="copyEncoderOutput()">Copy Output</button>
+          </div>
+          <div class="encoder-output" id="encoderOutput">Output will appear here...</div>
+        </div>
+
+        <!-- HASH TAB -->
+        <div class="panel-content" id="panel-hash">
+          <div class="panel-header">
+            <h3>&#128272; Hash Generator</h3>
+          </div>
+          <textarea class="encoder-input" id="hashInput" placeholder="Enter text to hash..." style="min-height:50px;"></textarea>
+          <div class="encoder-actions" style="margin:0.4rem 0;">
+            <button class="action-btn" onclick="generateHashes()">Generate Hashes</button>
+          </div>
+          <div id="hashOutput" style="display:flex;flex-direction:column;gap:0.3rem;"></div>
+        </div>
+
+        <!-- TIMER TAB -->
+        <div class="panel-content" id="panel-timer">
+          <div class="panel-header">
+            <h3>&#9201; Pomodoro Timer</h3>
+          </div>
+          <div class="timer-display" id="timerDisplay">25:00</div>
+          <div class="timer-controls">
+            <button class="timer-btn" id="timerStartBtn" onclick="toggleTimer()">Start</button>
+            <button class="timer-btn danger" onclick="resetTimer()">Reset</button>
+          </div>
+          <div class="timer-presets">
+            <span class="timer-preset" onclick="setTimer(25)">25 min</span>
+            <span class="timer-preset" onclick="setTimer(15)">15 min</span>
+            <span class="timer-preset" onclick="setTimer(10)">10 min</span>
+            <span class="timer-preset" onclick="setTimer(5)">5 min</span>
+            <span class="timer-preset" onclick="setTimer(1)">1 min</span>
+            <span class="timer-preset" onclick="setTimer(0.5)">30 sec</span>
+          </div>
+          <div style="text-align:center;margin-top:0.5rem;">
+            <div id="timerStatus" style="color:#888;font-size:0.7rem;">Ready — select a duration and press Start</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="install-overlay" id="installOverlay">
+    <div class="install-dialog">
+      <div class="app-icon">JS</div>
+      <h2>Install HADJ JavaScript Expert</h2>
+      <p>Install the app on your device for quick access and a full-screen experience.</p>
+      <div class="platform-hint" id="platformHint"></div>
+      <div class="ios-instructions" id="iosInstructions">
+        <div class="step"><span class="step-num">1</span> Tap the Share button <span style="font-size:1rem">&#128279;</span></div>
+        <div class="step"><span class="step-num">2</span> Select "Add to Home Screen"</div>
+        <div class="step"><span class="step-num">3</span> Tap "Add"</div>
+      </div>
+      <div class="btn-group" id="installBtnGroup">
+        <button class="btn-cancel" onclick="closeInstallOverlay()">Later</button>
+        <button class="btn-install" id="btnDoInstall" onclick="doInstall()">Install</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="api-key-prompt" id="apiKeyPrompt" style="display:none">
+    <div class="api-key-dialog">
+      <h2>Gemini API Key Required</h2>
+      <p>Enter your Gemini API Key. Get it from <a href="https://aistudio.google.com/apikey" target="_blank" style="color:#F7DF1E">Google AI Studio</a>.</p>
+      <input type="password" id="apiKeyInput" placeholder="Enter your API key...">
+      <button onclick="saveApiKey()" class="dialog-btn">Save</button>
+    </div>
+  </div>
+
+  <script type="module">
+    import { GoogleGenAI } from 'https://esm.sh/@google/genai@^1.34.0';
+
+    // ========== PWA INSTALL ==========
+    let deferredPrompt = null;
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    const isAndroid = /Android/.test(navigator.userAgent);
+    const installBtn = document.getElementById('installBtn');
+    const installOverlay = document.getElementById('installOverlay');
+    const platformHint = document.getElementById('platformHint');
+    const iosInstructions = document.getElementById('iosInstructions');
+    const btnDoInstall = document.getElementById('btnDoInstall');
+
+    if (!isStandalone) { installBtn.classList.add('visible'); }
+    window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; installBtn.classList.add('visible'); });
+    window.addEventListener('appinstalled', () => { installBtn.classList.remove('visible'); closeInstallOverlay(); showToast('Application installed successfully!'); });
+
+    window.promptInstall = () => {
+      if (isStandalone) { showToast('The app is already installed'); return; }
+      installOverlay.classList.add('show');
+      if (isIOS) { platformHint.textContent = 'Installation via the Safari browser'; iosInstructions.classList.add('show'); btnDoInstall.style.display = 'none'; }
+      else if (isAndroid) { platformHint.textContent = 'Installation via Chrome or your browser'; iosInstructions.classList.remove('show'); btnDoInstall.style.display = ''; btnDoInstall.textContent = 'Install'; }
+      else { platformHint.textContent = 'Installation on your desktop'; iosInstructions.classList.remove('show'); btnDoInstall.style.display = ''; btnDoInstall.textContent = 'Install on Desktop'; }
+    };
+    window.doInstall = async () => {
+      if (deferredPrompt) { deferredPrompt.prompt(); const { outcome } = await deferredPrompt.userChoice; deferredPrompt = null; closeInstallOverlay(); if (outcome === 'accepted') showToast('Installing...'); }
+      else { closeInstallOverlay(); showToast('Use your browser menu to install', true); }
+    };
+    window.closeInstallOverlay = () => { installOverlay.classList.remove('show'); };
+
+    if ('serviceWorker' in navigator) {
+      const swCode = `const CACHE_NAME='hadj-js-v2';const ASSETS=['/'];self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()));});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match('/'))));});`;
+      const swBlob = new Blob([swCode], { type: 'application/javascript' });
+      const swUrl = URL.createObjectURL(swBlob);
+      navigator.serviceWorker.register(swUrl).catch(() => {});
+    }
+
+    // ========== STATE ==========
+    const state = {
+      status: 'IDLE', session: null, mediaStream: null,
+      audioContextIn: null, audioContextOut: null, nextStartTime: 0,
+      activeSources: new Set(), frameInterval: null,
+      currentInputTranscription: '', currentOutputTranscription: '',
+      transcriptions: [], jsLibraries: [], currentProject: null,
+      apiKey: localStorage.getItem('gemini_api_key'),
+      timerInterval: null, timerSeconds: 25 * 60, timerRunning: false, timerTotal: 25 * 60
+    };
+
+    const elements = {
+      statusDot: document.getElementById('statusDot'),
+      statusText: document.getElementById('statusText'),
+      statusMessage: document.getElementById('statusMessage'),
+      video: document.getElementById('video'),
+      canvas: document.getElementById('canvas'),
+      videoContainer: document.getElementById('videoContainer'),
+      videoOverlay: document.getElementById('videoOverlay'),
+      visualizerCore: document.getElementById('visualizerCore'),
+      transcriptionMessages: document.getElementById('transcriptionMessages'),
+      toolsDisplay: document.getElementById('toolsDisplay'),
+      controlBtn: document.getElementById('controlBtn'),
+      btnText: document.getElementById('btnText'),
+      apiKeyPrompt: document.getElementById('apiKeyPrompt'),
+      apiKeyInput: document.getElementById('apiKeyInput'),
+      copyAllBtn: document.getElementById('copyAllBtn'),
+      deleteAllBtn: document.getElementById('deleteAllBtn'),
+      toast: document.getElementById('toast'),
+      consoleOutput: document.getElementById('consoleOutput'),
+      consoleInput: document.getElementById('consoleInput'),
+      jsonInput: document.getElementById('jsonInput'),
+      jsonOutput: document.getElementById('jsonOutput'),
+      regexPattern: document.getElementById('regexPattern'),
+      regexTestString: document.getElementById('regexTestString'),
+      regexResult: document.getElementById('regexResult'),
+      snippetList: document.getElementById('snippetList'),
+      snippetSearch: document.getElementById('snippetSearch'),
+      encoderInput: document.getElementById('encoderInput'),
+      encoderOutput: document.getElementById('encoderOutput'),
+      hashInput: document.getElementById('hashInput'),
+      hashOutput: document.getElementById('hashOutput'),
+      timerDisplay: document.getElementById('timerDisplay'),
+      timerStartBtn: document.getElementById('timerStartBtn'),
+      timerStatus: document.getElementById('timerStatus')
+    };
+
+    // ========== TOAST ==========
+    let toastTimeout;
+    function showToast(msg, isError = false) {
+      clearTimeout(toastTimeout);
+      elements.toast.textContent = msg;
+      elements.toast.className = 'toast' + (isError ? ' error' : '');
+      requestAnimationFrame(() => elements.toast.classList.add('show'));
+      toastTimeout = setTimeout(() => elements.toast.classList.remove('show'), 2500);
+    }
+
+    // ========== TAB SWITCHING ==========
+    window.switchTab = (tabName) => {
+      document.querySelectorAll('.panel-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
+      document.querySelectorAll('.panel-content').forEach(p => p.classList.toggle('active', p.id === 'panel-' + tabName));
+    };
+    window.openTool = (toolName) => { switchTab(toolName); };
+
+    // ========== COPY/DELETE ==========
+    function formatConversation() {
+      if (!state.transcriptions.length) return '';
+      const lines = ['=== HADJ JavaScript Expert ===', `Date: ${new Date().toLocaleString('en-US')}`, ''];
+      state.transcriptions.forEach(e => {
+        lines.push(`${e.role === 'user' ? '\u{1F464} You' : '\u{1F4BB} HADJ JS'}:`);
+        lines.push(e.text);
+        lines.push('');
+      });
+      return lines.join('\n');
+    }
+    window.copyAllConversation = async () => {
+      if (!state.transcriptions.length) { showToast('No conversation', true); return; }
+      const text = formatConversation();
+      try {
+        await navigator.clipboard.writeText(text);
+        elements.copyAllBtn.classList.add('copied');
+        elements.copyAllBtn.innerHTML = `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Copied!`;
+        showToast('Conversation copied');
+        setTimeout(() => {
+          elements.copyAllBtn.classList.remove('copied');
+          elements.copyAllBtn.innerHTML = `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg> Copy`;
+        }, 2000);
+      } catch { showToast('Copy failed', true); }
+    };
+    window.deleteAllConversation = () => {
+      if (!state.transcriptions.length) { showToast('No conversation', true); return; }
+      state.transcriptions = [];
+      state.currentInputTranscription = '';
+      state.currentOutputTranscription = '';
+      updateTranscriptions();
+      showToast('Conversation deleted');
+    };
+    async function copySingleMessage(text, btn) {
+      try { await navigator.clipboard.writeText(text); } catch {}
+      btn.classList.add('copied');
+      btn.innerHTML = `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>`;
+      showToast('Message copied');
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>`;
+      }, 2000);
+    }
+
+    // ========== AUDIO ==========
+    function encode(bytes) { let b = ''; for (let i = 0; i < bytes.byteLength; i++) b += String.fromCharCode(bytes[i]); return btoa(b); }
+    function decode(b64) { const s = atob(b64), b = new Uint8Array(s.length); for (let i = 0; i < s.length; i++) b[i] = s.charCodeAt(i); return b; }
+    async function decodeAudioData(data, ctx, sr, ch) {
+      const d = new Int16Array(data.buffer), fc = d.length / ch, buf = ctx.createBuffer(ch, fc, sr);
+      for (let c = 0; c < ch; c++) { const cd = buf.getChannelData(c); for (let i = 0; i < fc; i++) cd[i] = d[i * ch + c] / 32768.0; }
+      return buf;
+    }
+    function createPcmBlob(data) {
+      const i16 = new Int16Array(data.length);
+      for (let i = 0; i < data.length; i++) i16[i] = Math.max(-1, Math.min(1, data[i])) * 32767;
+      return { data: encode(new Uint8Array(i16.buffer)), mimeType: 'audio/pcm;rate=16000' };
+    }
+    function blobToBase64(blob) {
+      return new Promise((res, rej) => { const r = new FileReader(); r.onloadend = () => res(r.result.split(',')[1]); r.onerror = rej; r.readAsDataURL(blob); });
+    }
+
+    // ========== UI ==========
+    function updateStatus(s) {
+      state.status = s;
+      elements.statusText.textContent = s;
+      elements.statusDot.classList.toggle('active', s !== 'IDLE');
+      elements.statusMessage.className = 'status-message ' + s.toLowerCase();
+      elements.statusMessage.textContent = { 'IDLE': '', 'CONNECTING': 'Connecting...', 'LISTENING': 'Listening...', 'SPEAKING': 'HADJ JS is speaking...', 'ERROR': 'Error' }[s] || '';
+      elements.videoContainer.classList.toggle('active', s !== 'IDLE');
+      elements.videoOverlay.style.display = s === 'IDLE' ? 'flex' : 'none';
+      elements.visualizerCore.className = 'visualizer-core';
+      if (s === 'SPEAKING') elements.visualizerCore.classList.add('speaking');
+      if (s === 'LISTENING') elements.visualizerCore.classList.add('listening');
+    }
+    function updateTools() {
+      const h = [];
+      state.jsLibraries.forEach(d => h.push(`<div class="tool-card library"><span>\u{1F4E6}</span><span>${d.name}</span><span style="color:#c8b900">(${d.type})</span><span class="tool-close" onclick="removeLibrary('${d.id}')">\u2715</span></div>`));
+      if (state.currentProject) h.push(`<div class="tool-card project"><span>\u{1F4BB}</span><span>${state.currentProject.name}</span><span class="tool-close" onclick="removeProject()">\u2715</span></div>`);
+      elements.toolsDisplay.innerHTML = h.join('');
+    }
+    function updateTranscriptions() {
+      const msgs = elements.transcriptionMessages;
+      if (!state.transcriptions.length) {
+        msgs.innerHTML = `<div class="transcription-empty">Transcription will appear here...</div>
+          <div class="js-info"><h3>\u{1F4BB} HADJ JavaScript Expert</h3>
+            <p style="color:#c8b900; font-size:0.75rem;">I can help you with:</p>
+            <ul><li>JavaScript ES6+ and TypeScript</li><li>Asynchronous: Promises, async/await, Event Loop</li><li>DOM, Web APIs, Fetch, WebSockets</li><li>Node.js, Deno, Bun</li><li>React, Vue, Angular, Svelte</li><li>Express, Fastify, NestJS, Hono</li><li>Redux, Zustand, Pinia</li><li>Jest, Vitest, Playwright</li><li>Vite, Webpack, esbuild</li><li>REST, GraphQL, tRPC</li><li>Prisma, Drizzle, MongoDB</li><li>Docker, Serverless, Edge</li></ul></div>`;
+        return;
+      }
+      msgs.innerHTML = state.transcriptions.map(e => `
+        <div class="transcription-entry ${e.role}">
+          <div class="transcription-label">${e.role === 'user' ? 'You' : 'HADJ JS'}</div>
+          <div class="transcription-bubble">${e.text}
+            <button class="bubble-copy-btn" onclick="copySingleMessage(\`${e.text.replace(/`/g, '\\`').replace(/\\/g, '\\\\')}\`, this)" title="Copy">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+            </button>
+          </div>
+        </div>
+      `).join('');
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    // ========== JAVASCRIPT CONSOLE ==========
+    function addConsoleLine(text, type = 'log') {
+      const line = document.createElement('div');
+      line.className = 'console-line ' + type;
+      line.textContent = text;
+      elements.consoleOutput.appendChild(line);
+      elements.consoleOutput.scrollTop = elements.consoleOutput.scrollHeight;
+    }
+    window.clearConsole = () => {
+      elements.consoleOutput.innerHTML = '';
+      addConsoleLine('// Console cleared', 'info');
+    };
+    window.runConsole = () => {
+      const code = elements.consoleInput.value.trim();
+      if (!code) return;
+      addConsoleLine('> ' + code, 'cmd');
+      elements.consoleInput.value = '';
+      try {
+        const logs = [];
+        const fakeConsole = {
+          log: (...args) => logs.push({ type: 'log', text: args.map(a => typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a)).join(' ') }),
+          error: (...args) => logs.push({ type: 'error', text: args.join(' ') }),
+          warn: (...args) => logs.push({ type: 'warn', text: args.join(' ') }),
+          info: (...args) => logs.push({ type: 'info', text: args.join(' ') }),
+        };
+        const fn = new Function('console', `"use strict"; return (${code})`);
+        const result = fn(fakeConsole);
+        logs.forEach(l => addConsoleLine(l.text, l.type));
+        if (result !== undefined) {
+          const resultStr = typeof result === 'object' ? JSON.stringify(result, null, 2) : String(result);
+          addConsoleLine('← ' + resultStr, 'result');
+        }
+      } catch (err) {
+        addConsoleLine('Error: ' + err.message, 'error');
+      }
+    };
+    elements.consoleInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); runConsole(); }
+    });
+
+    // ========== JSON FORMATTER ==========
+    window.formatJson = () => {
+      const raw = elements.jsonInput.value.trim();
+      if (!raw) { elements.jsonOutput.innerHTML = '<span class="json-error">Enter JSON to format</span>'; return; }
+      try {
+        const parsed = JSON.parse(raw);
+        const formatted = JSON.stringify(parsed, null, 2);
+        elements.jsonOutput.innerHTML = syntaxHighlightJson(formatted);
+        showToast('JSON formatted');
+      } catch (err) {
+        elements.jsonOutput.innerHTML = `<span class="json-error">Error: ${err.message}</span>`;
+      }
+    };
+    window.minifyJson = () => {
+      const raw = elements.jsonInput.value.trim();
+      if (!raw) { elements.jsonOutput.innerHTML = '<span class="json-error">Enter JSON to minify</span>'; return; }
+      try {
+        const parsed = JSON.parse(raw);
+        const minified = JSON.stringify(parsed);
+        elements.jsonOutput.innerHTML = `<span class="json-success">Minified (${minified.length} chars):</span>\n\n` + syntaxHighlightJson(minified);
+        showToast('JSON minified');
+      } catch (err) {
+        elements.jsonOutput.innerHTML = `<span class="json-error">Error: ${err.message}</span>`;
+      }
+    };
+    window.copyJsonOutput = async () => {
+      const text = elements.jsonOutput.textContent;
+      if (!text) { showToast('Nothing to copy', true); return; }
+      try { await navigator.clipboard.writeText(text); showToast('Copied'); } catch { showToast('Copy failed', true); }
+    };
+    function syntaxHighlightJson(json) {
+      return json.replace(/("(\\u[\da-fA-F]{4}|\\[^u]|[^\\"])*")\s*:/g, '<span class="json-key">$1</span>:')
+        .replace(/:\s*("(\\u[\da-fA-F]{4}|\\[^u]|[^\\"])*")/g, ': <span class="json-string">$1</span>')
+        .replace(/:\s*(-?\d+\.?\d*([eE][+-]?\d+)?)/g, ': <span class="json-number">$1</span>')
+        .replace(/:\s*(true|false)/g, ': <span class="json-bool">$1</span>')
+        .replace(/:\s*(null)/g, ': <span class="json-null">$1</span>');
+    }
+
+    // ========== REGEX TESTER ==========
+    window.toggleFlag = (el) => { el.classList.toggle('active'); testRegex(); };
+    function getFlags() {
+      return Array.from(document.querySelectorAll('.regex-flag.active')).map(f => f.dataset.flag).join('');
+    }
+    function testRegex() {
+      const pattern = elements.regexPattern.value;
+      const testStr = elements.regexTestString.value;
+      if (!pattern) { elements.regexResult.innerHTML = '<div class="regex-info">Enter a pattern</div>'; return; }
+      if (!testStr) { elements.regexResult.innerHTML = '<div class="regex-info">Enter a test string</div>'; return; }
+      try {
+        const flags = getFlags();
+        const re = new RegExp(pattern, flags);
+        let html = '';
+        let matchCount = 0;
+        let match;
+        const allMatches = [];
+
+        if (flags.includes('g')) {
+          while ((match = re.exec(testStr)) !== null) {
+            allMatches.push({ index: match.index, length: match[0].length, text: match[0], groups: match.slice(1) });
+            matchCount++;
+            if (matchCount > 500) break;
+          }
+        } else {
+          match = re.exec(testStr);
+          if (match) {
+            allMatches.push({ index: match.index, length: match[0].length, text: match[0], groups: match.slice(1) });
+            matchCount = 1;
+          }
+        }
+
+        if (matchCount === 0) {
+          html = '<div class="regex-info" style="color:#f87171;">No matches found</div>';
+        } else {
+          let highlighted = '';
+          let lastIndex = 0;
+          allMatches.forEach(m => {
+            highlighted += escapeHtml(testStr.slice(lastIndex, m.index));
+            highlighted += `<span class="regex-match">${escapeHtml(m.text)}</span>`;
+            lastIndex = m.index + m.length;
+          });
+          highlighted += escapeHtml(testStr.slice(lastIndex));
+          html = `<div style="margin-bottom:0.3rem;color:#86efac;font-size:0.7rem;">${matchCount} match${matchCount > 1 ? 'es' : ''} found</div>`;
+          html += `<div style="line-height:1.8;">${highlighted}</div>`;
+          if (allMatches.some(m => m.groups.length > 0)) {
+            html += '<div style="margin-top:0.4rem;">';
+            allMatches.forEach((m, i) => {
+              if (m.groups.length > 0) {
+                html += `<div style="font-size:0.65rem;color:#888;">Match ${i + 1}: `;
+                m.groups.forEach((g, gi) => { html += `<span class="regex-group">$${gi + 1}: ${escapeHtml(g || 'undefined')}</span> `; });
+                html += '</div>';
+              }
+            });
+            html += '</div>';
+          }
+        }
+        elements.regexResult.innerHTML = html;
+      } catch (err) {
+        elements.regexResult.innerHTML = `<div class="regex-error" style="color:#f87171;font-size:0.75rem;">Invalid regex: ${err.message}</div>`;
+      }
+    }
+    function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+    elements.regexPattern.addEventListener('input', testRegex);
+    elements.regexTestString.addEventListener('input', testRegex);
+
+    // ========== SNIPPETS ==========
+    const snippets = [
+      { name: 'Debounce', desc: 'Delay function execution until user stops typing', code: `function debounce(fn, delay = 300) {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}\n\n// Usage:\nconst search = debounce((q) => console.log(q), 500);\ninput.addEventListener('input', (e) => search(e.target.value));` },
+      { name: 'Throttle', desc: 'Limit function calls to once per interval', code: `function throttle(fn, limit = 300) {\n  let inThrottle = false;\n  return (...args) => {\n    if (!inThrottle) {\n      fn(...args);\n      inThrottle = true;\n      setTimeout(() => (inThrottle = false), limit);\n    }\n  };\n}` },
+      { name: 'Deep Clone', desc: 'Deep copy an object without references', code: `function deepClone(obj) {\n  if (obj === null || typeof obj !== 'object') return obj;\n  if (obj instanceof Date) return new Date(obj);\n  if (obj instanceof RegExp) return new RegExp(obj);\n  if (obj instanceof Map) return new Map(deepClone([...obj]));\n  if (obj instanceof Set) return new Set(deepClone([...obj]));\n  const clone = Array.isArray(obj) ? [] : {};\n  for (const key in obj) {\n    if (obj.hasOwnProperty(key)) {\n      clone[key] = deepClone(obj[key]);\n    }\n  }\n  return clone;\n}` },
+      { name: 'Fetch with Retry', desc: 'HTTP fetch with automatic retry on failure', code: `async function fetchWithRetry(url, options = {}, retries = 3, delay = 1000) {\n  for (let i = 0; i < retries; i++) {\n    try {\n      const res = await fetch(url, options);\n      if (!res.ok) throw new Error(\`HTTP \${res.status}\`);\n      return await res.json();\n    } catch (err) {\n      if (i === retries - 1) throw err;\n      await new Promise(r => setTimeout(r, delay * (i + 1)));\n    }\n  }\n}` },
+      { name: 'Event Emitter', desc: 'Simple pub/sub event system', code: `class EventEmitter {\n  #events = new Map();\n  on(event, fn) {\n    if (!this.#events.has(event)) this.#events.set(event, []);\n    this.#events.get(event).push(fn);\n    return () => this.off(event, fn);\n  }\n  off(event, fn) {\n    const fns = this.#events.get(event);\n    if (fns) this.#events.set(event, fns.filter(f => f !== fn));\n  }\n  emit(event, ...args) {\n    (this.#events.get(event) || []).forEach(fn => fn(...args));\n  }\n  once(event, fn) {\n    const wrapper = (...args) => { fn(...args); this.off(event, wrapper); };\n    this.on(event, wrapper);\n  }\n}` },
+      { name: 'LRU Cache', desc: 'Least Recently Used cache with max size', code: `class LRUCache {\n  #cache = new Map();\n  constructor(maxSize = 100) { this.maxSize = maxSize; }\n  get(key) {\n    if (!this.#cache.has(key)) return undefined;\n    const val = this.#cache.get(key);\n    this.#cache.delete(key);\n    this.#cache.set(key, val);\n    return val;\n  }\n  set(key, val) {\n    if (this.#cache.has(key)) this.#cache.delete(key);\n    else if (this.#cache.size >= this.maxSize) {\n      this.#cache.delete(this.#cache.keys().next().value);\n    }\n    this.#cache.set(key, val);\n  }\n  get size() { return this.#cache.size; }\n}` },
+      { name: 'Promise Pool', desc: 'Limit concurrent async operations', code: `async function promisePool(tasks, concurrency = 3) {\n  const results = [];\n  const executing = new Set();\n  for (const [i, task] of tasks.entries()) {\n    const p = Promise.resolve().then(() => task());\n    results[i] = p;\n    executing.add(p);\n    const clean = () => executing.delete(p);\n    p.then(clean, clean);\n    if (executing.size >= concurrency) {\n      await Promise.race(executing);\n    }\n  }\n  return Promise.all(results);\n}` },
+      { name: 'LocalStorage Store', desc: 'Reactive localStorage wrapper', code: `function createLocalStore(key, defaults = {}) {\n  const stored = localStorage.getItem(key);\n  const data = stored ? JSON.parse(stored) : defaults;\n  return {\n    get: (k) => data[k],\n    set: (k, v) => { data[k] = v; localStorage.setItem(key, JSON.stringify(data)); },\n    remove: (k) => { delete data[k]; localStorage.setItem(key, JSON.stringify(data)); },\n    clear: () => { Object.keys(data).forEach(k => delete data[k]); localStorage.removeItem(key); },\n    getAll: () => ({ ...data })\n  };\n}` },
+      { name: 'Retry with Backoff', desc: 'Exponential backoff retry pattern', code: `async function retry(fn, { maxRetries = 3, baseDelay = 1000, maxDelay = 10000 } = {}) {\n  for (let attempt = 0; attempt <= maxRetries; attempt++) {\n    try {\n      return await fn();\n    } catch (err) {\n      if (attempt === maxRetries) throw err;\n      const delay = Math.min(baseDelay * 2 ** attempt + Math.random() * 1000, maxDelay);\n      console.warn(\`Retry \${attempt + 1}/\${maxRetries} in \${Math.round(delay)}ms\`);\n      await new Promise(r => setTimeout(r, delay));\n    }\n  }\n}` },
+      { name: 'Type Guards', desc: 'TypeScript runtime type checking utilities', code: `function isString(v) { return typeof v === 'string'; }\nfunction isNumber(v) { return typeof v === 'number' && !isNaN(v); }\nfunction isObject(v) { return v !== null && typeof v === 'object' && !Array.isArray(v); }\nfunction isArray(v) { return Array.isArray(v); }\nfunction isPromise(v) { return v instanceof Promise || (v && typeof v.then === 'function'); }\n\nfunction assertType(value, type, name = 'value') {\n  const checks = { string: isString, number: isNumber, object: isObject, array: isArray };\n  if (checks[type] && !checks[type](value)) {\n    throw new TypeError(\`Expected \${name} to be \${type}, got \${typeof value}\`);\n  }\n}` },
+      { name: 'Pipe/Compose', desc: 'Functional composition helpers', code: `const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);\nconst compose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x);\n\n// Example:\nconst process = pipe(\n  (s) => s.trim(),\n  (s) => s.toLowerCase(),\n  (s) => s.split(' '),\n  (words) => words.filter(w => w.length > 2),\n  (words) => words.join('-')\n);\n\nprocess('  Hello World From JS  ');\n// → "hello-world-from"` },
+      { name: 'Async Iterator', desc: 'Create async iterable from events or streams', code: `async function* fromEvent(target, eventName, signal) {\n  const queue = [];\n  let resolve;\n  const handler = (e) => {\n    if (resolve) { resolve({ value: e, done: false }); resolve = null; }\n    else queue.push(e);\n  };\n  target.addEventListener(eventName, handler);\n  signal?.addEventListener('abort', () => target.removeEventListener(eventName, handler));\n  try {\n    while (true) {\n      if (queue.length) yield queue.shift();\n      else yield await new Promise(r => (resolve = r));\n    }\n  } finally {\n    target.removeEventListener(eventName, handler);\n  }\n}` },
+    ];
+
+    function renderSnippets(filter = '') {
+      const filtered = filter
+        ? snippets.filter(s => s.name.toLowerCase().includes(filter) || s.desc.toLowerCase().includes(filter))
+        : snippets;
+      elements.snippetList.innerHTML = filtered.map((s, i) => `
+        <div class="snippet-item" onclick="this.classList.toggle('expanded')">
+          <div class="snippet-name">${s.name}</div>
+          <div class="snippet-desc">${s.desc}</div>
+          <div class="snippet-code" style="position:relative;">
+            <button class="snippet-copy" onclick="event.stopPropagation();copySnippet(${i})">Copy</button>${escapeHtml(s.code)}
+          </div>
+        </div>
+      `).join('');
+    }
+    window.filterSnippets = () => { renderSnippets(elements.snippetSearch.value.toLowerCase()); };
+    window.copySnippet = async (i) => {
+      try { await navigator.clipboard.writeText(snippets[i].code); showToast('Snippet copied'); } catch { showToast('Copy failed', true); }
+    };
+    renderSnippets();
+
+    // ========== ENCODER/DECODER ==========
+    window.encodeText = (type) => {
+      const input = elements.encoderInput.value;
+      if (!input) { elements.encoderOutput.textContent = 'Enter text to encode'; return; }
+      try {
+        let result;
+        switch (type) {
+          case 'base64': result = btoa(unescape(encodeURIComponent(input))); break;
+          case 'uri': result = encodeURIComponent(input); break;
+          case 'html': result = input.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); break;
+          case 'unicode': result = Array.from(input).map(c => '\\u' + c.charCodeAt(0).toString(16).padStart(4, '0')).join(''); break;
+        }
+        elements.encoderOutput.textContent = result;
+        showToast('Encoded');
+      } catch (err) { elements.encoderOutput.textContent = 'Error: ' + err.message; }
+    };
+    window.decodeText = (type) => {
+      const input = elements.encoderInput.value;
+      if (!input) { elements.encoderOutput.textContent = 'Enter text to decode'; return; }
+      try {
+        let result;
+        switch (type) {
+          case 'base64': result = decodeURIComponent(escape(atob(input))); break;
+          case 'uri': result = decodeURIComponent(input); break;
+          case 'html': { const t = document.createElement('textarea'); t.innerHTML = input; result = t.value; break; }
+          case 'unicode': result = input.replace(/\\u([\da-fA-F]{4})/g, (_, h) => String.fromCharCode(parseInt(h, 16))); break;
+        }
+        elements.encoderOutput.textContent = result;
+        showToast('Decoded');
+      } catch (err) { elements.encoderOutput.textContent = 'Error: ' + err.message; }
+    };
+    window.copyEncoderOutput = async () => {
+      const text = elements.encoderOutput.textContent;
+      if (!text || text === 'Output will appear here...') { showToast('Nothing to copy', true); return; }
+      try { await navigator.clipboard.writeText(text); showToast('Copied'); } catch { showToast('Copy failed', true); }
+    };
+
+    // ========== HASH GENERATOR ==========
+    async function hashString(str, algorithm) {
+      const data = new TextEncoder().encode(str);
+      const hashBuffer = await crypto.subtle.digest(algorithm, data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+    window.generateHashes = async () => {
+      const input = elements.hashInput.value;
+      if (!input) { elements.hashOutput.innerHTML = '<span style="color:#f87171;font-size:0.75rem;">Enter text to hash</span>'; return; }
+      const algos = ['SHA-1', 'SHA-256', 'SHA-384', 'SHA-512'];
+      let html = '';
+      for (const algo of algos) {
+        const hash = await hashString(input, algo);
+        html += `<div class="hash-output-row">
+          <span class="hash-label">${algo}</span>
+          <span class="hash-value" id="hash-${algo}">${hash}</span>
+          <button class="hash-copy" onclick="copyHash('${algo}')">Copy</button>
+        </div>`;
+      }
+      elements.hashOutput.innerHTML = html;
+      showToast('Hashes generated');
+    };
+    window.copyHash = async (algo) => {
+      const el = document.getElementById('hash-' + algo);
+      if (el) { try { await navigator.clipboard.writeText(el.textContent); showToast('Copied'); } catch {} }
+    };
+
+    // ========== POMODORO TIMER ==========
+    function formatTime(seconds) {
+      const m = Math.floor(seconds / 60);
+      const s = seconds % 60;
+      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+    function updateTimerDisplay() {
+      elements.timerDisplay.textContent = formatTime(state.timerSeconds);
+      const pct = state.timerTotal > 0 ? ((state.timerTotal - state.timerSeconds) / state.timerTotal) * 100 : 0;
+      elements.timerStatus.textContent = state.timerRunning
+        ? `Running... ${Math.round(pct)}% complete`
+        : state.timerSeconds === 0 ? 'Complete!' : 'Ready — select a duration and press Start';
+    }
+    window.setTimer = (minutes) => {
+      if (state.timerRunning) { showToast('Stop the timer first', true); return; }
+      state.timerSeconds = Math.round(minutes * 60);
+      state.timerTotal = state.timerSeconds;
+      updateTimerDisplay();
+      showToast(`Timer set to ${minutes} min`);
+    };
+    window.toggleTimer = () => {
+      if (state.timerRunning) {
+        clearInterval(state.timerInterval);
+        state.timerRunning = false;
+        elements.timerStartBtn.textContent = 'Resume';
+        elements.timerStartBtn.classList.remove('active');
+        updateTimerDisplay();
+        return;
+      }
+      if (state.timerSeconds <= 0) { showToast('Set a timer first', true); return; }
+      state.timerRunning = true;
+      elements.timerStartBtn.textContent = 'Pause';
+      elements.timerStartBtn.classList.add('active');
+      state.timerInterval = setInterval(() => {
+        state.timerSeconds--;
+        updateTimerDisplay();
+        if (state.timerSeconds <= 0) {
+          clearInterval(state.timerInterval);
+          state.timerRunning = false;
+          elements.timerStartBtn.textContent = 'Start';
+          elements.timerStartBtn.classList.remove('active');
+          showToast('Timer complete!');
+          try { new Audio('data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQ==').play(); } catch {}
+        }
+      }, 1000);
+    };
+    window.resetTimer = () => {
+      clearInterval(state.timerInterval);
+      state.timerRunning = false;
+      state.timerSeconds = state.timerTotal || 25 * 60;
+      elements.timerStartBtn.textContent = 'Start';
+      elements.timerStartBtn.classList.remove('active');
+      updateTimerDisplay();
+    };
+    updateTimerDisplay();
+
+    // ========== JAVASCRIPT TOOLS (AI) ==========
+    async function handleFunctionCall(fc) {
+      if (fc.name === 'listJsLibraries') {
+        const libs = [
+          { id: '1', name: 'React', type: 'Frontend Framework' },
+          { id: '2', name: 'Vue', type: 'Frontend Framework' },
+          { id: '3', name: 'Angular', type: 'Frontend Framework' },
+          { id: '4', name: 'Svelte', type: 'Frontend Framework' },
+          { id: '5', name: 'Express', type: 'Backend Framework' },
+          { id: '6', name: 'Fastify', type: 'Backend Framework' },
+          { id: '7', name: 'NestJS', type: 'Backend Framework' },
+          { id: '8', name: 'Next.js', type: 'Full-Stack Framework' },
+          { id: '9', name: 'Nuxt', type: 'Full-Stack Framework' },
+          { id: '10', name: 'Axios', type: 'HTTP Client' },
+          { id: '11', name: 'Zod', type: 'Validation' },
+          { id: '12', name: 'Prisma', type: 'ORM' },
+          { id: '13', name: 'Drizzle', type: 'ORM' },
+          { id: '14', name: 'Jest', type: 'Testing' },
+          { id: '15', name: 'Vitest', type: 'Testing' },
+          { id: '16', name: 'Playwright', type: 'E2E Testing' },
+          { id: '17', name: 'Lodash', type: 'Utility' },
+          { id: '18', name: 'TanStack Query', type: 'Data Fetching' },
+          { id: '19', name: 'Zustand', type: 'State Management' },
+          { id: '20', name: 'Framer Motion', type: 'Animation' }
+        ];
+        state.jsLibraries = libs; updateTools();
+        return { status: 'success', libraries: libs };
+      }
+      if (fc.name === 'createJsFile') {
+        const { name, description, language, framework } = fc.args;
+        const lang = language || 'js';
+        let code = '';
+        if (lang === 'ts' && framework === 'node') {
+          code = `/**\n * ${name}.ts\n * ${description || 'Node.js TypeScript module'}\n * Run: npx tsx ${name}.ts\n */\n\ninterface Config {\n  port: number;\n  host: string;\n  debug: boolean;\n}\n\nconst config: Config = {\n  port: Number(process.env.PORT) || 3000,\n  host: process.env.HOST || 'localhost',\n  debug: process.env.NODE_ENV !== 'production',\n};\n\nasync function main(): Promise<void> {\n  console.log(\`Starting server on \${config.host}:\${config.port}\`);\n}\n\nmain().catch((error: Error) => {\n  console.error('Fatal error:', error.message);\n  process.exit(1);\n});`;
+        } else if (lang === 'jsx' || lang === 'tsx' || framework === 'react') {
+          const compName = name.charAt(0).toUpperCase() + name.slice(1);
+          code = `/**\n * ${compName}.tsx\n * ${description || 'React component'}\n */\n\nimport React, { useState, useEffect } from 'react';\n\ninterface ${compName}Props {\n  title?: string;\n}\n\nexport default function ${compName}({ title = '${compName}' }: ${compName}Props) {\n  const [count, setCount] = useState<number>(0);\n\n  useEffect(() => {\n    document.title = \`\${title} - Count: \${count}\`;\n  }, [count, title]);\n\n  return (\n    <div className="${name.toLowerCase()}-container">\n      <h1>{title}</h1>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount((c) => c + 1)}>Increment</button>\n    </div>\n  );\n}`;
+        } else if (lang === 'ts') {
+          code = `/**\n * ${name}.ts\n * ${description || 'TypeScript module'}\n * Run: npx tsx ${name}.ts\n */\n\ninterface Result<T> {\n  success: boolean;\n  data?: T;\n  error?: string;\n}\n\nfunction createResult<T>(data: T): Result<T> {\n  return { success: true, data };\n}\n\nfunction createError(message: string): Result<never> {\n  return { success: false, error: message };\n}\n\nasync function main(): Promise<void> {\n  console.log('Hello from HADJ JavaScript Expert!');\n  const result = createResult({ message: 'It works!' });\n  console.log(result);\n}\n\nmain().catch(console.error);`;
+        } else {
+          code = `/**\n * ${name}.js\n * ${description || 'JavaScript module'}\n * Run: node ${name}.js\n */\n\n'use strict';\n\nasync function main() {\n  console.log('Hello from HADJ JavaScript Expert!');\n  const numbers = [1, 2, 3, 4, 5];\n  const doubled = numbers.map((n) => n * 2);\n  console.log('Doubled:', doubled);\n  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));\n  await delay(100);\n  console.log('Done!');\n}\n\nmain().catch((error) => {\n  console.error('Error:', error.message);\n  process.exit(1);\n});`;
+        }
+        const extMap = { js: '.js', ts: '.ts', jsx: '.jsx', tsx: '.tsx' };
+        const ext = extMap[lang] || '.js';
+        const proj = { id: Math.random().toString(36).substr(2, 5), name: name + ext, description, code };
+        state.currentProject = proj; updateTools();
+        return { status: 'success', message: `File "${name}${ext}" created`, code: proj.code };
+      }
+      if (fc.name === 'getJsDocumentation') {
+        const docs = {
+          'variables': 'const (block-scoped, immutable binding), let (block-scoped, reassignable), var (function-scoped, hoisted). Temporal dead zone for let/const. Best practice: prefer const, use let when needed, avoid var.',
+          'functions': 'Arrow functions: const add = (a, b) => a + b. Regular functions have "this". Default params, rest (...args), spread. Closures. IIFE. Higher-order functions: map, filter, reduce.',
+          'promises': 'new Promise((resolve, reject) => {}).then().catch().finally(). Promise.all/allSettled/race/any. async/await with try/catch.',
+          'async': 'Event Loop: call stack, microtask queue, macrotask queue. async/await. Never block the event loop. Worker Threads for CPU tasks.',
+          'dom': 'getElementById(), querySelector(), querySelectorAll(). createElement(), appendChild(). addEventListener(). classList. Fetch API.',
+          'node': 'Node.js: V8 + libuv. ES modules or CommonJS. Core: fs, path, http, stream, crypto. npm/yarn/pnpm.',
+          'react': 'Hooks: useState, useEffect, useContext, useReducer, useMemo, useCallback, useRef. JSX. Props. React 19: Server Components.',
+          'vue': 'Vue 3 Composition API: ref(), reactive(), computed(), watch(). SFC. Pinia. Vue Router.',
+          'typescript': 'Interfaces, type aliases, generics, utility types (Partial, Pick, Omit, Record). Type guards. tsconfig.json.',
+          'testing': 'Jest/Vitest: describe, it, expect. Testing Library. Playwright/Cypress for E2E. MSW for mocking.',
+          'api': 'REST: fetch, axios. GraphQL: Apollo. tRPC. WebSockets, SSE.',
+          'databases': 'Prisma, Drizzle ORM. MongoDB (Mongoose). PostgreSQL. Redis.',
+          'deployment': 'Docker. Serverless (Lambda, Vercel). PM2. GitHub Actions.',
+          'patterns': 'Module, Singleton, Factory, Observer, Middleware, Repository, DI. Composition over inheritance.',
+          'errors': 'try/catch/finally. Custom errors extends Error. Error.cause. Zod for validation.',
+          'performance': 'Code splitting, tree shaking, debounce/throttle, virtual scrolling, Web Workers, memoization.'
+        };
+        return { status: 'success', topic: fc.args.topic, documentation: docs[fc.args.topic] || 'See MDN Web Docs for full documentation.' };
+      }
+      return { error: 'Unknown function' };
+    }
+    window.removeLibrary = (id) => { state.jsLibraries = state.jsLibraries.filter(d => d.id !== id); updateTools(); };
+    window.removeProject = () => { state.currentProject = null; updateTools(); };
+
+    // ========== SESSION ==========
+    async function startSession() {
+      if (!state.apiKey) { elements.apiKeyPrompt.style.display = 'flex'; return; }
+      try {
+        updateStatus('CONNECTING');
+        state.audioContextIn = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 });
+        state.audioContextOut = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 24000 });
+        state.nextStartTime = 0;
+        const ai = new GoogleGenAI({ apiKey: state.apiKey });
+        state.mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: { width: { ideal: 640 }, height: { ideal: 480 } } });
+        elements.video.srcObject = state.mediaStream;
+        state.session = await ai.live.connect({
+          model: 'gemini-2.5-flash-native-audio-preview-09-2025',
+          callbacks: {
+            onopen: () => {
+              updateStatus('LISTENING');
+              const src = state.audioContextIn.createMediaStreamSource(state.mediaStream);
+              const sp = state.audioContextIn.createScriptProcessor(4096, 1, 1);
+              sp.onaudioprocess = (e) => { state.session?.sendRealtimeInput({ media: createPcmBlob(e.inputBuffer.getChannelData(0)) }); };
+              src.connect(sp); sp.connect(state.audioContextIn.destination);
+              state.frameInterval = setInterval(() => {
+                if (elements.video.readyState >= 2) {
+                  const ctx = elements.canvas.getContext('2d');
+                  elements.canvas.width = elements.video.videoWidth;
+                  elements.canvas.height = elements.video.videoHeight;
+                  ctx.drawImage(elements.video, 0, 0);
+                  elements.canvas.toBlob(async (blob) => { if (blob) state.session?.sendRealtimeInput({ media: { data: await blobToBase64(blob), mimeType: 'image/jpeg' } }); }, 'image/jpeg', 0.6);
+                }
+              }, 1000);
+            },
+            onmessage: async (msg) => {
+              if (msg.toolCall) for (const fc of msg.toolCall.functionCalls) { const r = await handleFunctionCall(fc); state.session?.sendToolResponse({ functionResponses: { id: fc.id, name: fc.name, response: { result: r } } }); }
+              if (msg.serverContent?.outputTranscription) state.currentOutputTranscription += msg.serverContent.outputTranscription.text;
+              if (msg.serverContent?.inputTranscription) state.currentInputTranscription += msg.serverContent.inputTranscription.text;
+              if (msg.serverContent?.turnComplete) {
+                const u = state.currentInputTranscription.trim(), a = state.currentOutputTranscription.trim();
+                if (u) state.transcriptions.push({ id: Math.random().toString(36).substr(2, 9), role: 'user', text: u, timestamp: Date.now() });
+                if (a) state.transcriptions.push({ id: Math.random().toString(36).substr(2, 9), role: 'agent', text: a, timestamp: Date.now() });
+                updateTranscriptions(); state.currentInputTranscription = ''; state.currentOutputTranscription = ''; updateStatus('LISTENING');
+              }
+              const b64 = msg.serverContent?.modelTurn?.parts[0]?.inlineData?.data;
+              if (b64) {
+                updateStatus('SPEAKING');
+                const ctx = state.audioContextOut; state.nextStartTime = Math.max(state.nextStartTime, ctx.currentTime);
+                const buf = await decodeAudioData(decode(b64), ctx, 24000, 1);
+                const s = ctx.createBufferSource(); s.buffer = buf; s.connect(ctx.destination);
+                s.addEventListener('ended', () => state.activeSources.delete(s));
+                s.start(state.nextStartTime); state.nextStartTime += buf.duration; state.activeSources.add(s);
+              }
+              if (msg.serverContent?.interrupted) { state.activeSources.forEach(s => s.stop()); state.activeSources.clear(); state.nextStartTime = 0; updateStatus('LISTENING'); }
+            },
+            onerror: (e) => { console.error(e); updateStatus('ERROR'); stopSession(); },
+            onclose: () => stopSession()
+          },
+          config: {
+            responseModalities: ['AUDIO'],
+            speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: 'Kore' } } },
+            systemInstruction: `You are HADJ JavaScript Expert, a world-class specialist in JavaScript and TypeScript programming.
+You help frontend developers, backend engineers, full-stack developers, and software architects:
+
+JAVASCRIPT FUNDAMENTALS (ES6+ / ES2015-ES2024):
+- Variables: const, let, var. Hoisting and temporal dead zone
+- Types: primitives, objects, symbols, bigint. typeof, instanceof
+- Functions: arrow functions, default params, rest/spread, closures
+- Prototypes and prototypal inheritance, classes (ES6+)
+- Destructuring, template literals, optional chaining (?.), nullish coalescing (??)
+- Iterators, generators, for...of, Iterables
+- Map, Set, WeakMap, WeakSet
+- Proxy, Reflect, decorators (Stage 3)
+- Error handling: try/catch, custom errors, Error.cause
+
+ASYNCHRONOUS PROGRAMMING:
+- Callbacks, Promises, Promise.all/allSettled/any/race
+- async/await, error handling with async
+- Event Loop: microtasks, macrotasks, call stack
+- Web Workers, SharedArrayBuffer, Atomics
+- Observables (RxJS), AsyncIterables
+
+TYPESCRIPT:
+- Type annotations, interfaces, type aliases, enums
+- Generics, conditional types, mapped types, template literal types
+- Utility types: Partial, Required, Pick, Omit, Record
+- Type narrowing, discriminated unions, type guards
+- tsconfig.json configuration
+
+FRONTEND FRAMEWORKS:
+- React: hooks (useState, useEffect, useReducer, useMemo, useCallback), Context, Server Components, React 19+
+- Vue 3: Composition API, reactivity system, Pinia, SFC
+- Angular: RxJS, DI, signals, standalone components
+- Svelte 5: runes, reactivity, SvelteKit
+
+BACKEND / NODE.JS:
+- Node.js: fs, path, http, stream, cluster, worker_threads
+- Express, Fastify, NestJS, Hono
+- Middleware, routing, validation (Zod, Joi)
+- Authentication: JWT, OAuth2, Passport
+- WebSockets: ws, Socket.io
+
+FULL-STACK & META-FRAMEWORKS:
+- Next.js (App Router, Server Actions, ISR)
+- Nuxt 3, SvelteKit, Remix, Astro
+- SSR, SSG, ISR, streaming
+- Edge computing: Cloudflare Workers, Vercel Edge
+
+BUILD TOOLS & TOOLING:
+- Vite, Webpack, esbuild, Rollup, Turbopack
+- ESLint, Prettier, Husky, lint-staged
+- npm, yarn, pnpm, bun, monorepo (Turborepo, Nx)
+
+TESTING:
+- Jest, Vitest, Mocha, Chai
+- Playwright, Cypress (E2E)
+- Testing Library, Mocking, Coverage
+
+APIs & DATA:
+- REST: fetch, axios, ky
+- GraphQL: Apollo, urql
+- tRPC, gRPC, WebSockets, SSE, WebRTC
+
+DATABASES & ORM:
+- Prisma, Drizzle ORM, TypeORM
+- MongoDB, PostgreSQL, Redis, SQLite
+
+STATE MANAGEMENT:
+- Redux Toolkit, Zustand, Jotai, Recoil
+- Pinia, Signals, TanStack Query, SWR
+
+STYLING & UI:
+- CSS-in-JS: styled-components, Emotion
+- Tailwind CSS, UnoCSS
+- Component libraries: shadcn/ui, Radix, MUI
+- Animation: Framer Motion, GSAP
+
+PERFORMANCE & SECURITY:
+- Code splitting, lazy loading, tree shaking
+- Lighthouse, Core Web Vitals
+- XSS prevention, CORS, CSP headers
+
+DEVOPS & DEPLOYMENT:
+- Docker, Serverless, CI/CD
+- PM2, cluster mode
+
+You can see the user via the camera to help debug code on screen.
+Available tools: list JavaScript libraries, create a JavaScript/TypeScript file, get documentation.
+Provide clean, modern code with complete error handling.
+Responses should be concise yet complete. Code must be complete and runnable.`,
+            tools: [{ functionDeclarations: [
+              { name: 'listJsLibraries', description: 'Lists popular JavaScript/TypeScript libraries and frameworks.', parameters: { type: 'OBJECT', properties: {}, required: [] } },
+              { name: 'createJsFile', description: 'Creates a JavaScript or TypeScript file with structure and documentation.', parameters: { type: 'OBJECT', properties: { name: { type: 'STRING' }, description: { type: 'STRING' }, language: { type: 'STRING', description: '"js", "ts", "jsx", "tsx"' }, framework: { type: 'STRING', description: '"react", "vue", "node", "vanilla"' } }, required: ['name'] } },
+              { name: 'getJsDocumentation', description: 'JavaScript/TypeScript documentation on 16+ topics.', parameters: { type: 'OBJECT', properties: { topic: { type: 'STRING' } }, required: ['topic'] } }
+            ] }],
+            inputAudioTranscription: {},
+            outputAudioTranscription: {}
+          }
+        });
+      } catch (err) { console.error(err); updateStatus('ERROR'); alert('Error: camera/microphone or API inaccessible'); }
+    }
+
+    async function stopSession() {
+      if (state.frameInterval) { clearInterval(state.frameInterval); state.frameInterval = null; }
+      if (state.session) { state.session.close(); state.session = null; }
+      if (state.mediaStream) { state.mediaStream.getTracks().forEach(t => t.stop()); state.mediaStream = null; }
+      if (state.audioContextIn) { await state.audioContextIn.close(); state.audioContextIn = null; }
+      if (state.audioContextOut) { await state.audioContextOut.close(); state.audioContextOut = null; }
+      state.activeSources.forEach(s => s.stop()); state.activeSources.clear(); updateStatus('IDLE');
+    }
+
+    elements.controlBtn.addEventListener('click', async () => {
+      if (state.status === 'IDLE' || state.status === 'ERROR') {
+        elements.controlBtn.disabled = true; await startSession(); elements.controlBtn.disabled = false;
+        elements.controlBtn.className = 'control-btn stop'; elements.btnText.textContent = 'Stop';
+        elements.controlBtn.querySelector('svg').outerHTML = `<svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clip-rule="evenodd" /></svg>`;
+      } else {
+        await stopSession();
+        elements.controlBtn.className = 'control-btn start'; elements.btnText.textContent = 'Start the Assistant';
+        elements.controlBtn.querySelector('svg').outerHTML = `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>`;
+      }
+    });
+
+    window.saveApiKey = () => { const k = elements.apiKeyInput.value.trim(); if (k) { state.apiKey = k; localStorage.setItem('gemini_api_key', k); elements.apiKeyPrompt.style.display = 'none'; startSession(); } };
+
+    updateStatus('IDLE'); updateTools(); updateTranscriptions();
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(reg => console.log('SW registered'))
+          .catch(err => console.log('SW registration failed'));
+      });
+    }
+  </script>
+</body>
+</html>
